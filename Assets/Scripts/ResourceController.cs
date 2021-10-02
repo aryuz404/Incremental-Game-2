@@ -19,8 +19,7 @@ public class ResourceController : MonoBehaviour
         {
             //menyimpan value yg diset ke _level pada Progress Data
             UserDataManager.Progress.ResourcesLevels[_index] = value;
-            //UserDataManager.Save(true);
-            UserDataManager.Save();
+            UserDataManager.Save(true);
         }
 
         get
@@ -126,8 +125,8 @@ public class ResourceController : MonoBehaviour
             if(!UserDataManager.HasResources(_index))
             {
                 UserDataManager.Progress.ResourcesLevels.Add(_level);
-                //UserDataManager.Save(true);
-                UserDataManager.Save();
+                UserDataManager.Save(true);
+                
             }
             
         }
